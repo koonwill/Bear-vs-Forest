@@ -15,5 +15,5 @@ def classify_image(img):
     return result
 
 example = ["bear.jpg", "forest.jpg"]
-iface = gr.Interface(classify_image, gr.inputs.Image(shape=(128, 128)), "text", examples=example)
+iface = gr.Interface(classify_image, inputs="image", outputs="text", examples=example)
 iface.launch(share=True)
